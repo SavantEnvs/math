@@ -1,0 +1,9 @@
+project: savantenvs/math
+target: minmax_element_variants
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/minmax_element_variants/testsuite
+cmds:
+  - cmd: /mayhem/minmax_element_variants
+    libfuzzer: true
+    timeout: 30

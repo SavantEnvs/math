@@ -1,0 +1,9 @@
+project: savantenvs/math
+target: fuzz_distributions
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_distributions/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_distributions
+    libfuzzer: true
+    timeout: 30
