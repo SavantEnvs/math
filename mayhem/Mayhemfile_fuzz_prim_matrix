@@ -1,0 +1,9 @@
+project: savantenvs/math
+target: fuzz_prim_matrix
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_prim_matrix/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_prim_matrix
+    libfuzzer: true
+    timeout: 30

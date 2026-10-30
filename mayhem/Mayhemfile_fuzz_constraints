@@ -1,0 +1,9 @@
+project: savantenvs/math
+target: fuzz_constraints
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_constraints/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_constraints
+    libfuzzer: true
+    timeout: 30
